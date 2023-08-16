@@ -21,6 +21,8 @@ class ProductManager {
             id: ProductManager.id,   
         };
 
+        console.log(newProduct);
+
   this.products.push(newProduct);        
 
 await fs.writeFile(this.patch, JSON.stringify(this.products));
@@ -32,11 +34,12 @@ await fs.writeFile(this.patch, JSON.stringify(this.products));
 
 
     getProducts = async () => {
-        //return JSON.parse();
+        let respuesta2 = await this.readProducts()
+        return console.log(respuesta2);
     }
 
-    getProductsById = async (id) => {
-        //return JSON.parse();
+    getProductsById = async () => {
+        
 
     }
    deleteProductsById = async (id) => {
@@ -48,8 +51,8 @@ await fs.writeFile(this.patch, JSON.stringify(this.products));
 
    updateProducts = async ({id, ...producto}) => {
     await this.deleteProductsById(id);
-    let productOld = await this.readProducts();
-    let productsModif = [{...producto, id}, ...productOld];
+    let productsOld = await this.readProducts();
+    let productsModif = [{...producto, id}, ...productsOld];
     await fs.writeFile(this.patch, JSON.stringify(productsModif));
    }
 
@@ -59,20 +62,27 @@ const productos = new ProductManager();
 
 /* productos.addProduct("producto prueba1", "Este es un producto prueba1", 200, "Sin imagen", "abc111", 25);  
 productos.addProduct("producto prueba2", "Este es un producto prueba2", 1000, "Sin imagen", "abc222", 25);  
-productos.addProduct("producto prueba3", "Este es un producto prueba3", 1200, "Sin imagen", "abc223", 25); */
+productos.addProduct("producto prueba3", "Este es un producto prueba3", 1200, "Sin imagen", "abc333", 25);
+productos.addProduct("producto prueba4", "Este es un producto prueba4", 200, "Sin imagen", "abc444", 25);  
+productos.addProduct("producto prueba5", "Este es un producto prueba5", 1000, "Sin imagen", "abc555", 25);  
+productos.addProduct("producto prueba6", "Este es un producto prueba6", 1200, "Sin imagen", "abc666", 25);
+productos.addProduct("producto prueba7", "Este es un producto prueba7", 200, "Sin imagen", "abc777", 25);  
+productos.addProduct("producto prueba8", "Este es un producto prueba8", 1000, "Sin imagen", "abc888", 25);  
+productos.addProduct("producto prueba9", "Este es un producto prueba9", 1200, "Sin imagen", "abc999", 25);
+productos.addProduct("producto prueba10", "Este es un producto prueba10", 1200, "Sin imagen", "abc1010", 25); */
 
-//productos.getProducts();
+productos.getProducts();
 
 //productos.getProductById(3);
 
 //productos.deleteProductsById(2);
 
 productos.updateProducts({
-    title:"Titulo3",
-    description: "Descripcion3",
-    price: 4500,
-    imagen: "Imagen3",
-    code: "abc125",
-    stock: 15,
+    title:"producto prueba3",
+    description: "Este es un producto prueba3",
+    price: 1200,
+    imagen: "Sin imagen",
+    code: "abc333",
+    stock: 25,
     id:3,
-});
+}); 

@@ -8,5 +8,18 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CinWerle/Desafio2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/CinWerle/Desafio2/issues"
+  },
+  "homepage": "https://github.com/CinWerle/Desafio2#readme",
   "description": ""
 }
