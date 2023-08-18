@@ -33,7 +33,7 @@ getProductById(id){
  }
 }
 
-const productos = new ProductManager();
+//const productos = new ProductManager();
 //Primera llamada = arreglo vacio
 console.log(productos.getProduct());
 

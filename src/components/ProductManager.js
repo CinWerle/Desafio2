@@ -58,7 +58,7 @@ await fs.writeFile(this.patch, JSON.stringify(this.products));
 
 }
 
-const productos = new ProductManager();
+//const productos = new ProductManager();
 
 /* productos.addProduct("producto prueba1", "Este es un producto prueba1", 200, "Sin imagen", "abc111", 25);  
 productos.addProduct("producto prueba2", "Este es un producto prueba2", 1000, "Sin imagen", "abc222", 25);  
@@ -71,13 +71,13 @@ productos.addProduct("producto prueba8", "Este es un producto prueba8", 1000, "S
 productos.addProduct("producto prueba9", "Este es un producto prueba9", 1200, "Sin imagen", "abc999", 25);
 productos.addProduct("producto prueba10", "Este es un producto prueba10", 1200, "Sin imagen", "abc1010", 25); */
 
-productos.getProducts();
+//productos.getProducts();
 
 //productos.getProductById(3);
 
 //productos.deleteProductsById(2);
 
-productos.updateProducts({
+/* productos.updateProducts({
     title:"producto prueba3",
     description: "Este es un producto prueba3",
     price: 1200,
@@ -85,4 +85,6 @@ productos.updateProducts({
     code: "abc333",
     stock: 25,
     id:3,
-}); 
+}); */
+
+export default ProductManager;
